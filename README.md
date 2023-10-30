@@ -1,4 +1,58 @@
-# Getting Started with Create React App
+# Navigation using React
+
+This project is a simple page to understand and exercise the different types of routes to set the website navigation.
+
+It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+It uses the library [React Router](https://reactrouter.com/).
+
+# Images
+![Basic URL to Home](image.png)
+![URL with a number parameter](image-5.png)
+![URL with a text parameter](image-6.png)
+![Basic route](image-3.png)
+![Not found URL](image-4.png)
+
+# Technologies
+React, Html, CSS
+
+# Learnings
+- library react-router-dom
+- CSS: 
+    - unit vh (view height) - you can define a relative high, by the visible screen area... 80vh = 80% of the visible area
+    - list-style: none; - to remove the list bullets 
+    - text-decoration: none; - to remove the link underline
+    - flex: 1; - to expand the element and the click area - important in the menu, to the user doesn't have to click exactly on the name
+    - .Menu li a:hover {background: #00000030; } - to change the hover color, and the last 2 numbers are the transparency
+- To pass parameters it's necessary the hook [useParams](https://reactrouter.com/en/main/hooks/use-params)
+`import {useParams} from 'react-router-dom'`
+and also:
+```
+<Link to="/param/123">Param #01</Link> ---> to set the path
+
+<Route path="/param/:id" element={<Param/>}/> --> ":id" means a variable, without : it would be a literal value like: <Route path="/about" element={<About/>}/>
+
+const { id } = useParams() --> to get id value
+
+<p>Value: {id} </p> ---> to show the value
+```
+- To set unmapped pages to a specific path:
+`<Route path="*" element={<NotFound/>}/>`
+
+
+# To execute
+Run `npm start`
+
+
+
+
+
+
+
+
+
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +121,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
